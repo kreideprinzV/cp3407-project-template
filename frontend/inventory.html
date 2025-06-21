@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventory Management - RMS</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-gray-50 font-['Inter']">
+    <nav class="bg-white shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex">
+                    <div class="flex-shrink-0 flex items-center">
+                        <h1 class="text-2xl font-bold text-gray-900">RMS</h1>
+                    </div>
+                    <div class="hidden sm:ml-6 sm:flex sm:space-x-8">
+                        <a href="index.html" class="text-gray-500 hover:text-gray-900 inline-flex items-center px-1 pt-1 text-sm font-medium">Home</a>
+                        <a href="menu.html" class="text-gray-500 hover:text-gray-900 inline-flex items-center px-1 pt-1 text-sm font-medium">Menu</a>
+                        <a href="order.html" class="text-gray-500 hover:text-gray-900 inline-flex items-center px-1 pt-1 text-sm font-medium">Orders</a>
+                        <a href="inventory.html" class="border-b-2 border-black text-gray-900 inline-flex items-center px-1 pt-1 text-sm font-medium">Inventory</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
+        <div class="px-4 sm:px-0">
+            <div class="sm:flex sm:items-center">
+                <div class="sm:flex-auto">
+                    <h2 class="text-2xl font-semibold text-gray-900">Inventory Management</h2>
+                </div>
+                <div class="mt-4 sm:mt-0 sm:ml-16 sm:flex-none">
+                    <button type="button" class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-black hover:bg-gray-800">
+                        Add Item
+                    </button>
+                </div>
+            </div>
+
+            <!-- Inventory Overview -->
+            <div class="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+                <div class="bg-white overflow-hidden shadow rounded-lg">
+                    <div class="p-5">
+                        <div class="flex items-center">
+                            <div class="flex-shrink-0">
+                                <div class="w-12 h-12 rounded-md bg-green-100 flex items-center justify-center">
+                                    <span class="text-green-600 text-lg font-semibold">42</span>
+                                </div>
+                            </div>
+                            <div class="ml-5">
+                                <h3 class="text-sm font-medium text-gray-900">Total Items</h3>
+                                <p class="text-sm text-gray-500">In stock</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white overflow-hidden shadow rounded-lg">
+                    <div class="p-5">
+                        <div class="flex items-center">
+                            <div class="flex-shrink-0">
+                                <div class="w-12 h-12 rounded-md bg-red-100 flex items-center justify-center">
+                                    <span class="text-red-600 text-lg font-semibold">5</span>
+                                </div>
+                            </div>
+                            <div class="ml-5">
+                                <h3 class="text-sm font-medium text-gray-900">Low Stock</h3>
+                                <p class="text-sm text-gray-500">Below threshold</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Inventory List -->
+            <div class="mt-8">
+                <div class="overflow-hidden shadow ring-1 ring-black ring-opacity-5 sm:rounded-lg">
+                    <table class="min-w-full divide-y divide-gray-300">
+                        <thead class="bg-gray-50">
+                            <tr>
+                                <th scope="col" class="py-3.5 pl-4 pr-3 text-left text-sm font-semibold text-gray-900">Item Name</th>
+                                <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">Category</th>
+                                <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">Quantity</th>
+                                <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">Unit</th>
+                                <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">Threshold</th>
+                                <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">Last Updated</th>
+                                <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">Status</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-gray-200 bg-white">
+                            <tr>
+                                <td class="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-gray-900">Pasta</td>
+                                <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">Dry Goods</td>
+                                <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">112</td>
+                                <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">kg</td>
+                                <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">50</td>
+                                <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">2023-07-20</td>
+                                <td class="whitespace-nowrap px-3 py-4 text-sm">
+                                    <span class="inline-flex rounded-full bg-green-100 px-2 text-xs font-semibold leading-5 text-green-800">
+                                        Good
+                                    </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-gray-900">Tomato</td>
+                                <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">Vegetables</td>
+                                <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">42</td>
+                                <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">kg</td>
+                                <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">45</td>
+                                <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">2023-07-20</td>
+                                <td class="whitespace-nowrap px-3 py-4 text-sm">
+                                    <span class="inline-flex rounded-full bg-red-100 px-2 text-xs font-semibold leading-5 text-red-800">
+                                        Low
+                                    </span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
